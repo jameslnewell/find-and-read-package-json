@@ -12,7 +12,7 @@ npm install --save find-and-read-package-json
 
 ```javascript
 
-const findAndReadPackageJson = require('read-package.json');
+const findAndReadPackageJson = require('find-and-read-package-json');
 
 findAndReadPackageJson(__dirname)
   .then(json => console.log(json))
