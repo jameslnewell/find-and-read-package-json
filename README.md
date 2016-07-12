@@ -30,7 +30,7 @@ findAndReadPackageJson(dir, options)
 Find and read data from a `package.json` file that exists in the provided directory, or that exists in a parent
 directory of the provided directory.
 
-###### Parameters
+##### Parameters
 
 - `dir : string` - Required. The directory to start looking for a `package.json` file in.
 - `options : object` - Optional. The additional options.
