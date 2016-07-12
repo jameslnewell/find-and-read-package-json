@@ -33,7 +33,7 @@ directory of the provided directory.
 ##### Parameters
 
 - `dir : string` - Required. The directory to start looking for a `package.json` file in.
-- `options : object` - Optional. The additional options.
+- `options : object`
   - `cache : object` - Optional. An object shared between calls to `findAndReadPackageJson()` to reduce repeated
   calls to
    `fs
