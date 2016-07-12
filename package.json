@@ -1,0 +1,21 @@
+{
+  "name": "find-and-read-package-json",
+  "version": "1.0.0",
+  "description": "Find and read data from a package.json file.",
+  "keywords": [
+    "find",
+    "read",
+    "package.json",
+    "find-package-json",
+    "read-package-json"
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "rewire": "^2.5.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "license": "MIT"
+}
