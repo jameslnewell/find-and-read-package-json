@@ -1,6 +1,6 @@
 {
   "name": "find-and-read-package-json",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Find and read data from a package.json file.",
   "keywords": [
     "find",
@@ -12,6 +12,7 @@
   "repository": "jameslnewell/find-and-read-package-json",
   "main": "lib/index.ts",
   "types": "lib/index.d.ts",
+  "files": ["lib"],
   "devDependencies": {
     "@tradie/node-scripts": "^1.1.2",
     "@types/jest": "^23.1.1"
