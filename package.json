@@ -1,6 +1,6 @@
 {
   "name": "find-and-read-package-json",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Find and read data from a package.json file.",
   "keywords": [
     "find",
@@ -9,13 +9,18 @@
     "find-package-json",
     "read-package-json"
   ],
+  "main": "lib/index.ts",
+  "types": "lib/index.d.ts",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.5.3",
-    "rewire": "^2.5.2"
+    "@tradie/node-scripts": "^1.1.2",
+    "@types/jest": "^23.1.1"
   },
   "scripts": {
-    "test": "mocha"
+    "clean": "node-scripts clean",
+    "build": "node-scripts build",
+    "test": "node-scripts test",
+    "example": "node-scripts example",
+    "prepublishOnly": "yarn run clean && yarn run build && yarn run test"
   },
   "license": "MIT"
 }

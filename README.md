@@ -10,13 +10,13 @@ npm install --save find-and-read-package-json
 
 ## Usage
 
-```javascript
+```js
 
-const findAndReadPackageJson = require('find-and-read-package-json');
+import findAndReadPackageJSON from 'find-and-read-package-json';
 
-findAndReadPackageJson(__dirname)
-  .then(json => console.log(json))
-  .catch(err => console.error(err))
+findAndReadPackageJSON(process.cwd())
+  .then(({file, json}) => console.log(file, json))
+  .catch(error => console.error(error))
 ;
 
 ```
@@ -24,7 +24,7 @@ findAndReadPackageJson(__dirname)
 ## API
 
 ```js
-findAndReadPackageJson(dir, options)
+findAndReadPackageJSON(directory: string, options: Options): Promise<{file: string; json: any}>
 ```
 
 Find and read data from a `package.json` file that exists in the provided directory, or that exists in a parent
@@ -32,10 +32,10 @@ directory of the provided directory.
 
 ##### Parameters
 
-- `dir : string` - Required. The directory to start looking for a `package.json` file in.
-- `options : object`
-  - `cache : object` - Optional. An object shared between calls to `findAndReadPackageJson()` to reduce repeated
+- `directory`: `string` - Required. The directory we will start looking for a `package.json` file in.
+- `options`
+  - `cache`: `{[file: string]: any}` - Optional. An object shared between calls to `findAndReadPackageJSON()` to reduce repeated
   calls to
    `fs
   .readFile()`.
-  - `transform : function(json : object)` Optional. A function to transform the JSON read from a `package.json` file.
+  - `transform`: `(json : any) => any` Optional. A function to transform the JSON read from a `package.json` file (to save large chunks of JSON from being cached).
