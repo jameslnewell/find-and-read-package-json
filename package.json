@@ -9,6 +9,7 @@
     "find-package-json",
     "read-package-json"
   ],
+  "repository": "jameslnewell/find-and-read-package-json",
   "main": "lib/index.ts",
   "types": "lib/index.d.ts",
   "devDependencies": {
